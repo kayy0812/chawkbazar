@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px;
+    background-color: var(--white-color);
+    height: 80px;
+}
+
+.header-half {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__brand {
+    background-image: url('../img/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.header__navbar {
+    height: 100%;
+    list-style: none;
+}
+
+.header__navbar-item {
+    display: inline-block;
+}
+
+.header__navbar-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    line-height: 80px;
+    font-size: 1.4rem;
+    padding: 0 16px;
+}
+
+.header__navbar-icon {
+    position: relative;
+    opacity: 0.4;
+    top: 1px;
+    margin-left: 3px;
+}
+
+.header__languages-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    height: 38px;
+    padding: 12px;
+    margin-right: 20px;
+}
+
+.header__languages-btn::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 8px;
+    opacity: 0.1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.header__languages-flag {
+    margin-right: 6px;
+}
+
+.header__languages-name {
+    font-size: 1.3rem;
+    margin-right: 6px;
+    font-weight: 550;
+}
+
+.header__languages-switch {
+    opacity: 0.4;
+}
+
+.header__languages-switch > i {
+    position: relative;
+    display: block;
+}
+
+.header__languages-switch > i:first-child {
+    top: 3px;
+}
+
+.header__languages-switch > i:last-child {
+    top: -3px;
+}
+
+.header__search-btn {
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+}
+
+.header__search-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.header__login {
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin-right: 20px;
+}
+
+.header__cart-btn {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.header__cart-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.header__cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-radius: 50%;
+}
+
