@@ -1,3 +1,4 @@
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,7 @@
     margin-right: 15px;
 }
 
+/* Navbar */
 .header__navbar {
     position: relative;
     height: 100%;
@@ -198,7 +200,8 @@
     opacity: 1;
 }
 
-.header__languages-btn {
+/* Languages */
+.header__language-btn {
     position: relative;
     display: flex;
     align-items: center;
@@ -207,7 +210,7 @@
     margin-right: 20px;
 }
 
-.header__languages-btn::after {
+.header__language-btn::after {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -220,33 +223,63 @@
     left: 0;
 }
 
-.header__languages-flag {
+.header__language-flag {
     margin-right: 6px;
 }
 
-.header__languages-name {
+.header__language-name {
     font-size: 1.4rem;
     margin-right: 8px;
     font-weight: 550;
 }
 
-.header__languages-switch {
+.header__language-switch {
     opacity: 0.4;
 }
 
-.header__languages-switch > i {
+.header__language-switch > i {
     position: relative;
     display: block;
 }
 
-.header__languages-switch > i:first-child {
+.header__language-switch > i:first-child {
     top: 3px;
 }
 
-.header__languages-switch > i:last-child {
+.header__language-switch > i:last-child {
     top: -3px;
 }
 
+.header__language-list {
+    list-style: none;
+    position: absolute;
+    visibility: hidden;
+    transition: all .1s ease;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3px 0;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.header__language-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+}
+
+.header__language-item > span {
+    font-weight: 500;
+}
+
+.header__language-item:hover {
+    background-color: var(--item-bg-hover);
+}
+
+/* Search */
 .header__search-btn {
     width: 20px;
     height: 20px;
@@ -258,12 +291,14 @@
     height: 100%;
 }
 
+/* Account */
 .header__login {
     font-size: 1.6rem;
     font-weight: 600;
     margin-right: 20px;
 }
 
+/* Cart */
 .header__cart-btn {
     position: relative;
     width: 20px;

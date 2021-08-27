@@ -6,6 +6,7 @@
     --text-color: #212121;
     --border-color: rgba(230, 230, 230, 1);
     --box-shadow: 0 1px 3px #ccc;
+    --item-bg-hover: rgba(33, 33, 33, 0.05);
 
     /* Navbar */
     --navbar-menu-link-bg-hover: rgba(33, 33, 33, 0.1);
