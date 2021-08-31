@@ -1,5 +1,205 @@
+/* Modal */
+.modal-searcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-top: 24px;
+    border-radius: 8px;
+    height: 64px;
+    width: 900px;
+    max-width: calc(100vw - 12px);
+}
+
+.modal-searcher__img {
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.modal-searcher__input {
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+.modal-searcher__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: url('../img/cancel.svg');
+    cursor: pointer;
+    width: 24px;
+    opacity: 0.4;
+}
+
+.modal-searchers__results {
+    display: none;
+    background-color: var(--white-color);
+    position: absolute;
+    overflow-y: auto;
+    height: 550px;
+    border-radius: 8px;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+}
+
+.modal-searcher__input:focus + 
+.modal-searchers__results {
+    display: block;
+}
+
+.modal-searchers__results::-webkit-scrollbar {
+    width: 3px;
+}
+
+.modal-searchers__results::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.modal-searchers__results::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-searchers__results-list {
+    list-style: none;
+}
+
+.modal-searchers__results-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+.modal-searchers__results-img {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 96px;
+    height: 96px;
+}
+
+.modal-searchers__results-information {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-searchers__results-name {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.modal-searchers__results-price {
+    font-weight: 600;
+}
+
+.modal-searchers__results-old-price {
+    text-decoration:line-through;
+    margin-left: 8px;
+    opacity: 0.6;
+}
+
+.modal-auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    background-color: var(--white-color);
+    width: 467px;
+    height: 495px;
+    font-size: 1.4rem;
+}
+
+.modal-auth__logo {
+
+}
+
+.modal-auth__heading {
+
+}
+
+.modal-auth__form {
+
+}
+
+.modal-auth__form-wrapper {
+
+}
+
+.modal-auth__form-wrapper--nowrap {
+
+}
+
+.modal-auth__form-input {
+
+}
+
+.modal-auth__form-remember {
+
+}
+
+.modal-auth__form-checkbox {
+
+}
+
+.modal-auth__form-toggle {
+
+}
+
+.modal-auth__form-forgot-password {
+
+}
+
+.modal-auth__decoration {
+
+}
+
+.modal-auth__decoration-text {
+
+}
+
+.modal-auth__social {
+
+}
+
+.modal-auth__social--facebook {
+
+}
+
+.modal-auth__social--google {
+
+}
+
+.modal-auth__switch {
+
+}
+
+.modal-auth__switch-text {
+
+}
+
+.modal-auth__switch-btn {
+
+}
+
+
 /* Header */
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,8 +226,9 @@
 /* Navbar */
 .header__navbar {
     position: relative;
-    height: 100%;
     list-style: none;
+    height: 100%;
+    white-space: nowrap;
 }
 
 .header__navbar-item {
@@ -44,8 +245,8 @@
     text-decoration: none;
     color: var(--text-color);
     line-height: 80px;
-    font-size: 1.5rem;
-    padding: 0 16px;
+    font-size: 1.4rem;
+    padding: 0 12px;
 }
 
 .header__navbar-link::before {
@@ -106,6 +307,7 @@
     top: calc(100% + 16px);
     left: 0;
     opacity: 0;
+    z-index: 10;
 }
 
 .header__navbar-menu--gray {
@@ -265,6 +467,11 @@
     opacity: 0;
 }
 
+.header__language-list--active {
+    visibility: visible;
+    opacity: 1;
+}
+
 .header__language-item {
     display: flex;
     align-items: center;
@@ -275,7 +482,8 @@
     font-weight: 500;
 }
 
-.header__language-item:hover {
+.header__language-item:hover,
+.header__language-item.header__language-item--active {
     background-color: var(--item-bg-hover);
 }
 
@@ -293,7 +501,7 @@
 
 /* Account */
 .header__login {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-right: 20px;
 }
@@ -317,7 +525,7 @@
     justify-content: center;
     top: -10px;
     right: -10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     width: 22px;
     height: 22px;

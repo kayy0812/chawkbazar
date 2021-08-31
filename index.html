@@ -989,6 +989,168 @@
 
         </footer>
     </div>
+
+    <!-- Modal search -->
+    <div class="modal js-search-modal">
+        <div class="modal-overlay modal--transition modal-opacity--0 modal-opacity--to-0-1"></div>
+        <div class="modal-container modal--transition modal-opacity--0 modal-opacity--to-1">
+            <div class="modal-searcher">
+                <label for="search-input">
+                    <img src="./assets/img/search.svg" alt="Search" class="modal-searcher__img">
+                </label>
+                <input type="search" placeholder="Search..." autocomplete="off" id="search-input" class="modal-searcher__input">
+                <div class="modal-searchers__results">
+                    <ul class="modal-searchers__results-list">
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/armani.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Armani Veni Vidi Vici</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$17.99</span>
+                                        <span class="modal-searchers__results-old-price">$20.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/global-desi.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">H&M Global Desi</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$30.00</span>
+                                        <span class="modal-searchers__results-old-price">$40.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/zara-solly.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Zara Solly White Shirt</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$25.00</span>
+                                        <span class="modal-searchers__results-old-price">$32.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/hermes-carlton.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Hermes Carlton London</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$15.00</span>
+                                        <!-- <span class="modal-searchers__results-old-price">$32.00</span> -->
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/scuba-stand.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Scuba Stand Collar Topper Jacket</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$12.00</span>
+                                        <span class="modal-searchers__results-old-price">$16.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/armani-wide-leg.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Armani Wide-Leg Trousers</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$60.00</span>
+                                        <span class="modal-searchers__results-old-price">$80.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/zara-shoes-green.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Zara Shoes Green</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$250.00</span>
+                                        <span class="modal-searchers__results-old-price">$300.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="modal-searchers__results-item">
+                            <a href="#" class="modal-searchers__results-link">
+                                <img src="./assets/img/items/nike-shoes.png" alt="" class="modal-searchers__results-img">
+                                <div class="modal-searchers__results-information">
+                                    <h3 class="modal-searchers__results-name">Nike Shoes</h3>
+                                    <div>
+                                        <span class="modal-searchers__results-price">$39.99</span>
+                                        <!-- <span class="modal-searchers__results-old-price">$300.00</span> -->
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Auth Form -->
+    <div class="modal js-auth-modal modal--active">
+        <div class="modal-overlay modal--transition modal-opacity--0-3"></div>
+        <div class="modal-cancel"></div>
+        <div class="modal-container modal-container--align-items-center modal--transition modal-transform--scale-1-2">
+            <div class="modal-auth">
+                <img src="./assets/img/logo.svg" alt="ChawkBazar" class="modal-auth__logo">
+                <h3 class="modal-auth__heading">Login with your email & password</h3>
+                <form action="" class="modal-auth__form">
+                    <div class="modal-auth__form-wrapper">
+                        <label for="email-text">Email</label>
+                        <input name="email" type="text" id="email-text" class="modal-auth__form-input">
+                    </div>
+                    <div class="modal-auth__form-wrapper">
+                        <label for="password-text">Password</label>
+                        <input name="password" type="password" id="password-text" class="modal-auth__form-input">
+                    </div>
+                    <div class="modal-auth__form-wrapper modal-auth__form-wrapper--nowrap">
+                        <label class="modal-auth__form-remember">
+                            <input name="remember-me" id="remember" type="checkbox" class="modal-auth__form-checkbox">
+                            <span class="modal-auth__form-toggle"></span>
+                        </label>
+                        <label for="remember">Remember me</label>
+                        <span class="modal-auth__form-forgot-password">Forgot Passaword?</span>
+                    </div>
+                    <div class="modal-auth__form-wrapper">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+                <div class="modal-auth__decoration">
+                    <span class="modal-auth__decoration-text">Or</span>
+                </div>
+                <button class="modal-auth__social modal-auth__social--facebook">
+                    <img src="./assets/img/facebook.svg" alt="Facebook">
+                    <span>Facebook</span>
+                </button>
+                <button class="modal-auth__social modal-auth__social--google">
+                    <img src="./assets/img/google.svg" alt="Google">
+                    <span>Facebook</span>
+                </button>
+                <div class="modal-auth__switch">
+                    <span class="modal-auth__switch-text">Don't have any account?</span>
+                    <span class="modal-auth__switch-btn">Register</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
     <!-- Nút thay đổi ngôn ngữ -->
     <script>
         const langBtn = document.querySelector('.header__language-btn');
@@ -998,12 +1160,28 @@
         langBtn.onclick = function(e) {
             langMenuClosed = !langMenuClosed;
             if (!langMenuClosed) {
-                langMenu.style.visibility = 'visible';
-                langMenu.style.opacity = '1';
+                langMenu.classList.add('header__language-list--active');
                 return true;
             }
-            langMenu.style.opacity = null;
-            langMenu.style.visibility = null;
+            langMenu.classList.remove('header__language-list--active');
+        }
+    </script>
+    <!-- Modal -->
+    <script>
+        const overlayModal = document.querySelector('.modal-overlay');
+        const cancelModalBtn = document.querySelector('.modal-cancel');
+        const searchModalContainer = document.querySelector('.modal-container');
+    </script>
+    <!-- Nút tìm kiếm -->
+    <script>
+        const searchBtn = document.querySelector('.header__search-btn');
+        const searchModal = document.querySelector('.js-search-modal');
+        searchBtn.onclick = function () {
+            searchModal.classList.add('modal--active');
+        }
+
+        overlayModal.onclick = function () {
+            searchModal.classList.remove('modal--active');
         }
     </script>
 </body>
