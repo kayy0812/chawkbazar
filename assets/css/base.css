@@ -5,11 +5,20 @@
     --white-color: #fff;
     --text-color: #212121;
     --border-color: rgba(230, 230, 230, 1);
+    --border-color-bold: rgb(100, 100, 100);
     --box-shadow: 0 1px 3px #ccc;
     --item-bg-hover: rgba(33, 33, 33, 0.05);
+    --facebook-bg-color: #4267b2;
+    --facebook-bg-hover-color: #395fad;
+    --google-bg-color: #4285f4;
+    --google-bg-hover-color: #307bf9;
 
     /* Navbar */
     --navbar-menu-link-bg-hover: rgba(33, 33, 33, 0.1);
+
+    /* Modal */
+    --modal-login-btn-bg-color: #2d2d2d;
+    --modal-login-btn-hover-bg-color: #3a3a3a;
 }
 
 * {
@@ -70,11 +79,18 @@ html {
 .modal {
     visibility: hidden;
     position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     z-index: 99999999;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.modal--align-items-center {
+    align-items: center;
 }
 
 .modal--active {
@@ -89,7 +105,8 @@ html {
     opacity: 0;
 }
 
-.modal-opacity--0-3 {
+.modal--active 
+.modal-opacity--to-0-3 {
     opacity: 0.3;
 }
 
@@ -101,6 +118,38 @@ html {
 .modal--active 
 .modal-opacity--to-1 {
     opacity: 1;
+}
+
+.modal:not(.modal--active) 
+.modal-animation--scale-1-to-1-1 {
+    animation: modalScale_1_to_1-1 .15s ease forwards;
+}
+
+@keyframes modalScale_1_to_1-1 {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+.modal--active 
+.modal-animation--scale-1-1-to-1 {
+    animation: modalScale_1-1_to_1 .15s ease;
+}
+
+@keyframes modalScale_1-1_to_1 {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .modal-overlay {
@@ -126,15 +175,33 @@ html {
 }
 
 .modal-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
+    position: relative;
+    display: inline-block;
     z-index: 2;
-    transform: translateX(-50%);
-
 }
 
-.modal-container--align-items-center {
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+/* Class */
+.font-weight--600 {
+    font-weight: 600 !important;
 }
+
+.user-select--none {
+    user-select: none !important;
+}
+
+.cursor--pointer {
+    cursor: pointer !important;
+}
+
+.margin-top--30 {
+    margin-top: 30px !important;
+}
+
+.margin-left--6 {
+    margin-left: 6px;
+}
+
+.margin-right--6 {
+    margin-right: 6px;
+}
+

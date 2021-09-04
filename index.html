@@ -1103,48 +1103,116 @@
         </div>
     </div>
     <!-- Modal Auth Form -->
-    <div class="modal js-auth-modal modal--active">
-        <div class="modal-overlay modal--transition modal-opacity--0-3"></div>
-        <div class="modal-cancel"></div>
-        <div class="modal-container modal-container--align-items-center modal--transition modal-transform--scale-1-2">
-            <div class="modal-auth">
+    <div class="modal modal--align-items-center js-auth-modal">
+        <div class="modal-overlay modal--transition modal-opacity--0 modal-opacity--to-0-3"></div>
+        <div class="modal-cancel modal--transition modal-opacity--0 modal-opacity--to-1"></div>
+        <div class="modal-container modal--transition modal-animation--scale-1-1-to-1 modal-animation--scale-1-to-1-1">
+            <div class="modal-auth js-auth-login modal-auth--active">
                 <img src="./assets/img/logo.svg" alt="ChawkBazar" class="modal-auth__logo">
                 <h3 class="modal-auth__heading">Login with your email & password</h3>
                 <form action="" class="modal-auth__form">
                     <div class="modal-auth__form-wrapper">
-                        <label for="email-text">Email</label>
-                        <input name="email" type="text" id="email-text" class="modal-auth__form-input">
+                        <label class="font-weight--600" for="email-text-login">Email</label>
+                        <input name="email" type="text" id="email-text-login" class="modal-auth__form-input" required>
                     </div>
                     <div class="modal-auth__form-wrapper">
-                        <label for="password-text">Password</label>
-                        <input name="password" type="password" id="password-text" class="modal-auth__form-input">
+                        <label class="font-weight--600" for="password-text-login">Password</label>
+                        <input name="password" type="password" id="password-text-login" class="modal-auth__form-input" required>
+                        <label class="modal-auth__form-password-hidden" for="password-text-login">
+                            <!-- Hidden -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <!-- Viewed -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path></svg>
+                        </label>
                     </div>
                     <div class="modal-auth__form-wrapper modal-auth__form-wrapper--nowrap">
                         <label class="modal-auth__form-remember">
                             <input name="remember-me" id="remember" type="checkbox" class="modal-auth__form-checkbox">
                             <span class="modal-auth__form-toggle"></span>
                         </label>
-                        <label for="remember">Remember me</label>
-                        <span class="modal-auth__form-forgot-password">Forgot Passaword?</span>
+                        <label class="user-select--none" for="remember">Remember me</label>
+                        <span auth="btn-forgot" class="modal-auth__form-forgot-password">Forgot Password?</span>
                     </div>
                     <div class="modal-auth__form-wrapper">
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Login" class="btn modal-auth__form-submit">
                     </div>
                 </form>
                 <div class="modal-auth__decoration">
                     <span class="modal-auth__decoration-text">Or</span>
                 </div>
-                <button class="modal-auth__social modal-auth__social--facebook">
+                <button class="btn modal-auth__social modal-auth__social--facebook margin-top--30">
                     <img src="./assets/img/facebook.svg" alt="Facebook">
-                    <span>Facebook</span>
+                    <span>Login With Facebook</span>
                 </button>
-                <button class="modal-auth__social modal-auth__social--google">
+                <button class="btn modal-auth__social modal-auth__social--google">
                     <img src="./assets/img/google.svg" alt="Google">
-                    <span>Facebook</span>
+                    <span>Login With Google</span>
                 </button>
                 <div class="modal-auth__switch">
                     <span class="modal-auth__switch-text">Don't have any account?</span>
-                    <span class="modal-auth__switch-btn">Register</span>
+                    <span auth="btn-signup" class="modal-auth__switch-btn">Register</span>
+                </div>
+            </div>
+            <div class="modal-auth modal-auth--flex-start js-auth-forgot">
+                <img src="./assets/img/logo.svg" alt="ChawkBazar" class="modal-auth__logo">
+                <h3 class="modal-auth__heading">We'll send you a link to reset your password</h3>
+                <form action="" class="modal-auth__form">
+                    <div class="modal-auth__form-wrapper">
+                        <label class="font-weight--600" for="email-text-forgot">Email</label>
+                        <input name="email" type="text" id="email-text-forgot" class="modal-auth__form-input" required>
+                    </div>
+                    <div class="modal-auth__form-wrapper">
+                        <input type="submit" value="Reset Password" class="btn modal-auth__form-submit">
+                    </div>
+                </form>
+                <div class="modal-auth__decoration">
+                    <span class="modal-auth__decoration-text">Or</span>
+                </div>
+                <div class="modal-auth__switch">
+                    <span class="modal-auth__switch-text">Back to</span>
+                    <span auth="btn-login" class="modal-auth__switch-btn">Login</span>
+                </div>
+            </div>
+            <div class="modal-auth js-auth-signup">
+                <img src="./assets/img/logo.svg" alt="ChawkBazar" class="modal-auth__logo">
+                <h3 class="modal-auth__heading">By signing up, you agree to our <a href="#" class="modal-auth__heading-link margin-right--6">terms</a>&<a href="#" class="modal-auth__heading-link margin-left--6">policy</a></h3>
+                <form action="" class="modal-auth__form">
+                    <div class="modal-auth__form-wrapper">
+                        <label class="font-weight--600" for="name-text-signup">Name</label>
+                        <input name="name" type="text" id="name-text-signup" class="modal-auth__form-input" required>
+                    </div>
+                    <div class="modal-auth__form-wrapper">
+                        <label class="font-weight--600" for="email-text-signup">Email</label>
+                        <input name="email" type="text" id="email-text-signup" class="modal-auth__form-input" required>
+                    </div>
+                    <div class="modal-auth__form-wrapper">
+                        <label class="font-weight--600" for="password-text-signup">Password</label>
+                        <input name="password" type="password" id="password-text-signup" class="modal-auth__form-input" required>
+                        <label class="modal-auth__form-password-hidden" for="password-text-signup">
+                            <!-- Hidden -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <!-- Viewed -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path></svg>
+                        </label>
+                    </div>
+                    <div class="modal-auth__form-wrapper">
+                        <input type="submit" value="Register" class="btn modal-auth__form-submit">
+                    </div>
+                </form>
+                <div class="modal-auth__decoration">
+                    <span class="modal-auth__decoration-text">Or</span>
+                </div>
+                <button class="btn modal-auth__social modal-auth__social--facebook margin-top--30">
+                    <img src="./assets/img/facebook.svg" alt="Facebook">
+                    <span>Login With Facebook</span>
+                </button>
+                <button class="btn modal-auth__social modal-auth__social--google">
+                    <img src="./assets/img/google.svg" alt="Google">
+                    <span>Login With Google</span>
+                </button>
+                <div class="modal-auth__switch">
+                    <span class="modal-auth__switch-text">Already have an account?</span>
+                    <span auth="btn-login" class="modal-auth__switch-btn">Login</span>
                 </div>
             </div>
         </div>
@@ -1168,8 +1236,8 @@
     </script>
     <!-- Modal -->
     <script>
-        const overlayModal = document.querySelector('.modal-overlay');
-        const cancelModalBtn = document.querySelector('.modal-cancel');
+        const overlayModal = document.querySelectorAll('.modal-overlay');
+        const cancelModalBtn = document.querySelectorAll('.modal-cancel');
         const searchModalContainer = document.querySelector('.modal-container');
     </script>
     <!-- Nút tìm kiếm -->
@@ -1179,9 +1247,68 @@
         searchBtn.onclick = function () {
             searchModal.classList.add('modal--active');
         }
+    </script>
+    <!-- Nút tài khoản đăng nhập | đăng ký -->
+    <script>
+        const authBtn = document.querySelector('.header__login');
+        const authModal = document.querySelector('.js-auth-modal');
+        authBtn.onclick = function () {
+            authModal.classList.add('modal--active');
+        }
+    </script>
+    <!-- Nút ẩn hiện mật khẩu -->
+    <script>
+        const hidePasswordBtns = document.querySelectorAll('.modal-auth__form-password-hidden');
+        const passwordInputs = document.querySelectorAll('.modal-auth__form-input[name="password"]');
+        for (const hidePasswordBtn of hidePasswordBtns) {
+            var isViewedPassword = false;
+            hidePasswordBtn.onclick = function () {
+                isViewedPassword = !isViewedPassword;
+                if (!isViewedPassword) {
+                    this.classList.remove('modal-auth__form-password-hidden--disabled');
+                    for (const passwordInput of passwordInputs) {
+                        passwordInput.setAttribute('type', 'text');
+                    }
+                    return;
+                }
+                this.classList.add('modal-auth__form-password-hidden--disabled');
+                for (const passwordInput of passwordInputs) {
+                    passwordInput.setAttribute('type', 'password');
+                }
+            }
+        }
+    </script>
 
-        overlayModal.onclick = function () {
-            searchModal.classList.remove('modal--active');
+    <!-- Switch Auth -->
+    <script>
+        const modalAuths = document.querySelectorAll('.modal-auth');
+        const authBtns = document.querySelectorAll('.modal-auth [auth*="btn-"]');
+        for (var btn of authBtns) {
+            btn.onclick = function () {
+                for (var modal of modalAuths) {
+                    if (modal.classList.contains('js-auth-' + this.getAttribute('auth').split('-')[1])){
+                        modal.classList.add('modal-auth--active');
+                    } else {
+                        modal.classList.remove('modal-auth--active');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Overlay & Cancel button -->
+    <script>
+        for (const overlay of overlayModal) {
+            overlay.onclick = function () {
+                authModal.classList.remove('modal--active');
+                searchModal.classList.remove('modal--active');
+            }
+        }
+        for (const cancel of cancelModalBtn) {
+            cancel.onclick = function () {
+                authModal.classList.remove('modal--active');
+                searchModal.classList.remove('modal--active');
+            }
         }
     </script>
 </body>
