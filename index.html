@@ -978,7 +978,7 @@
                 </button>
                 <button class="btn header__cart-btn">
                     <img src="./assets/img/cart.svg" alt="Cart" class="header__cart-icon">
-                    <span class="header__cart-count">99+</span>
+                    <span class="header__cart-count">0</span>
                 </button>
             </div>
         </header>
@@ -1256,6 +1256,22 @@
             authModal.classList.add('modal--active');
         }
     </script>
+    <!-- Switch Auth -->
+    <script>
+        const modalAuths = document.querySelectorAll('.modal-auth');
+        const authBtns = document.querySelectorAll('.modal-auth [auth*="btn-"]');
+        for (var btn of authBtns) {
+            btn.onclick = function () {
+                for (var modal of modalAuths) {
+                    if (modal.classList.contains('js-auth-' + this.getAttribute('auth').split('-')[1])){
+                        modal.classList.add('modal-auth--active');
+                    } else {
+                        modal.classList.remove('modal-auth--active');
+                    }
+                }
+            }
+        }
+    </script>
     <!-- Nút ẩn hiện mật khẩu -->
     <script>
         const hidePasswordBtns = document.querySelectorAll('.modal-auth__form-password-hidden');
@@ -1278,36 +1294,21 @@
             }
         }
     </script>
-
-    <!-- Switch Auth -->
-    <script>
-        const modalAuths = document.querySelectorAll('.modal-auth');
-        const authBtns = document.querySelectorAll('.modal-auth [auth*="btn-"]');
-        for (var btn of authBtns) {
-            btn.onclick = function () {
-                for (var modal of modalAuths) {
-                    if (modal.classList.contains('js-auth-' + this.getAttribute('auth').split('-')[1])){
-                        modal.classList.add('modal-auth--active');
-                    } else {
-                        modal.classList.remove('modal-auth--active');
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Overlay & Cancel button -->
     <script>
+        const modals = document.querySelectorAll('.modal');
         for (const overlay of overlayModal) {
             overlay.onclick = function () {
-                authModal.classList.remove('modal--active');
-                searchModal.classList.remove('modal--active');
+                for (var modal of modals) {
+                    modal.classList.remove('modal--active');
+                }
             }
         }
         for (const cancel of cancelModalBtn) {
             cancel.onclick = function () {
-                authModal.classList.remove('modal--active');
-                searchModal.classList.remove('modal--active');
+                for (var modal of modals) {
+                    modal.classList.remove('modal--active');
+                }
             }
         }
     </script>

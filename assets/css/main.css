@@ -256,6 +256,7 @@ label.modal-auth__form-password-hidden--disabled > svg:first-child{
 }
 
 .modal-auth__form-forgot-password {
+    user-select: none;
     cursor: pointer;
     text-decoration: underline;
     margin-left: auto;
@@ -349,6 +350,7 @@ label.modal-auth__form-password-hidden--disabled > svg:first-child{
 }
 
 .modal-auth__switch-btn {
+    user-select: none;
     display: inline-block;
     text-decoration: underline;
     font-size: 1.6rem;
@@ -363,12 +365,12 @@ label.modal-auth__form-password-hidden--disabled > svg:first-child{
 /* Header */
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
     margin: 0 24px;
     background-color: var(--white-color);
     height: 80px;
